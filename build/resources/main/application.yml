@@ -1,0 +1,25 @@
+server:
+  port: 8088
+
+spring:
+  webflux:
+    static-path-pattern: /static/**
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/kakaobanktest
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      use-new-id-generator-mappings: false
+    show-sql: true
+
+
+
+#sql 로깅 설정
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
